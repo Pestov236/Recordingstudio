@@ -47,6 +47,9 @@ class RecordingStudio {
             w.printDescription()
         }
     } 
+    func add(studioWorker: StudioWorker) {
+        self.studioWorker.append(studioWorker)
+    }
 }
 
 class Performer {
@@ -158,6 +161,9 @@ class Test {
         
         let studioWorker = StudioWorker(familia: "Петров", position: "Звукооператор", salary: 200000.00 )
         studioWorker.printPerformers()
+        recordingStudio.add(studioWorker: studioWorker)
+        recordingStudio.printStudioWorker()
+        
         let performer = Performer(familia: "Пугачёв", phone: 43521890, passportData: "456123")
         studioWorker.add(performers: performer)
         studioWorker.printPerformers()
